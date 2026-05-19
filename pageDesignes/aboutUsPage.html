@@ -1,0 +1,328 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us - Vraj Namkeen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#e7e2d7",
+                        "secondary": "#755b00",
+                        "outline": "#717785",
+                        "on-primary-fixed-variant": "#00531f",
+                        "secondary-fixed-dim": "#f0c12c",
+                        "secondary-fixed": "#ffdf90",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#3b002e",
+                        "on-surface": "#1d1c15",
+                        "surface-container-high": "#ede8dd",
+                        "on-tertiary-fixed-variant": "#87006c",
+                        "primary-fixed": "#88fb9a",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1d1c15",
+                        "surface-container": "#f2ede3",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#f7fff2",
+                        "inverse-primary": "#6cdd80",
+                        "tertiary-container": "#ca33a4",
+                        "surface-tint": "#006e2c",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#414753",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#006b2a",
+                        "on-secondary-fixed-variant": "#584400",
+                        "tertiary": "#aa0d89",
+                        "surface": "#fef9ee",
+                        "tertiary-fixed": "#ffd8ec",
+                        "surface-variant": "#e7e2d7",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-dim": "#dedacf",
+                        "surface-container-low": "#f8f3e8",
+                        "inverse-surface": "#323029",
+                        "inverse-on-surface": "#f5f0e5",
+                        "outline-variant": "#c1c6d5",
+                        "on-primary-fixed": "#002108",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffaddf",
+                        "primary-fixed-dim": "#6cdd80",
+                        "primary-container": "#008738",
+                        "on-secondary-container": "#6f5600",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#fccc38",
+                        "background": "#fef9ee",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-bright": "#fef9ee",
+                        "brand-pink": "#e6007e",
+                        "brand-green": "#009639",
+                        "brand-yellow": "#ffce00"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "sm": "0.25rem",
+                        "md": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["'Plus Jakarta Sans'", "sans-serif"],
+                        "display": ["'Plus Jakarta Sans'", "sans-serif"],
+                        "body": ["Poppins", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+        }
+        h1, h2, h3, h4, h5, h6, .font-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-label {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Logo blend mode */
+        .logo-blend {
+            mix-blend-mode: multiply;
+            filter: contrast(1.1);
+        }
+        
+        /* Modern Navbar gradient */
+        .navbar-gradient {
+            background: linear-gradient(135deg, rgba(0, 107, 42, 0.95) 0%, rgba(0, 150, 57, 0.95) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopNavBar Component -->
+<header class="w-full top-0 sticky navbar-gradient shadow-md z-50 border-b border-white/10">
+<div class="flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
+<!-- Brand Logo -->
+<a class="flex items-center gap-2" href="#">
+<img alt="Vraj Namkeen" class="h-16 w-auto logo-blend bg-white/10 rounded-xl p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlbtkYRqB-3f77Okqn8SLpmJqxBg6W_381WRvVCoIxnwx1XV3m26NK9RUu462FPaJIjjGX4W_JUSzd4b99VrC4dGKTVBVwuWO_Wzl6OomvUx3T-PWwqguRjpj65zOiAbof85SYJIjD-qt5NOBwotdxf5uerTxIk4czFEDoD4JUGuSh2sArQskrGT-gwFggntjyLVDzz5DjFOMOqwe3TBDi0ZSlTjd6sPqxUftzMhjSsJ4bEiz3b9-7sJ2JpuIxTDVj1t6zFvKsPWU">
+</a>
+<!-- Navigation Links (Hidden on Mobile) -->
+<nav class="hidden md:flex gap-8 items-center bg-white/5 px-6 py-2 rounded-full border border-white/10">
+<a class="text-white font-bold border-b-2 border-brand-yellow pb-1 font-body text-base hover:text-brand-yellow transition-all active:scale-95 duration-200" href="#">
+                    Home
+                </a>
+<a class="text-white/80 hover:text-brand-yellow transition-colors font-body text-base active:scale-95 duration-200" href="#">
+                    About
+                </a>
+<a class="text-white/80 hover:text-brand-yellow transition-colors font-body text-base active:scale-95 duration-200" href="#">
+                    Products
+                </a>
+<a class="text-white/80 hover:text-brand-yellow transition-colors font-body text-base active:scale-95 duration-200" href="#">
+                    Distribution
+                </a>
+<a class="text-white/80 hover:text-brand-yellow transition-colors font-body text-base active:scale-95 duration-200" href="#">
+                    Contact
+                </a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 bg-brand-yellow text-on-background px-6 py-2 rounded-full font-label text-sm font-bold hover:bg-yellow-400 transition-all active:scale-95 shadow-[0_0_15px_rgba(255,206,0,0.4)]">
+                    Become a Distributor
+                    <span class="material-symbols-outlined text-[18px]">storefront</span>
+</button>
+<button class="md:hidden text-white p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-primary-container">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Indian Snacks Background" class="w-full h-full object-cover opacity-60 mix-blend-overlay" data-alt="A vibrant, high-quality close-up of traditional Indian snacks and spices scattered artistically on a rustic wooden table. The scene is warmly lit, casting soft shadows that highlight the textures of the crispy sev and golden chips. The rich greens and earthy tones create an inviting, authentic culinary atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWpmvxpXLR9XERXx2YgUGkhr47BdhoVXXx6OeSpUs6QBgAGAuRZdbEmNjili2HnqYBCQDfMP45zpZfIfji9POrk05ymyY9oH5bsBoI0NTvcvfwqX3_TfUaYPRr_tyQmJoUJ01FzBf7ikcAORd2hjqONBwaQeWdtQFR6XKAHpe3xTRfXDAdM-vRKzucBJArA98-7T2rPZooG3D0_khLuSE_3d5Vq_EcVu-zWtP5x6AqZLxuQ-9NzHA5zRUOTwZf83bc-YazrYS-678">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
+<div class="glass p-8 rounded-xl shadow-xl inline-flex flex-col items-center animate-fade-in-up">
+<img alt="Vraj Logo Large" class="w-24 h-24 mb-6 object-contain bg-white rounded-full p-2 shadow-lg" data-alt="The Vraj Namkeen brand logo prominently displayed as a central badge, featuring its vibrant green and pink peacock feather design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFF7JM0HsppUhr8d8gPJONDdOrQOlCzDm2wqsqTNCrX0Vyst-Zh4qslW7T9kbaxorWPRa8ZZI5yVQRD44qhuyhDVzgR9MPUO4J6dEqRy5v3mKJEdH0zIVB7nrcQ0oIlnrSBObZiDEqZdo_bhKVRDK4SZI5GMhhJ-n4uvv3kCPBo0HGSO1b2LikD-SQ3UuFD655am5hYF2cZtk2RvhO9p0pUoMdT3ihcTneHgGXKt6JRyrkHsA8rnth6ERldaNwm0EvlZEN9mETxLc">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold text-primary-fixed mb-4 drop-shadow-md">
+                        Har Dil Ki Peheli Pasand
+                    </h1>
+<p class="font-body text-xl text-on-primary-container/90 max-w-2xl font-medium">
+                        Crafting authentic, crispy moments of joy for every household. Taste the tradition, feel the crunch.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Our Journey Section -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-bold text-primary mb-4">Our Journey</h2>
+<div class="w-24 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
+<p class="font-body text-on-surface-variant max-w-2xl mx-auto text-lg">
+                        From a small kitchen to becoming the heart of every Indian family's snack time, our story is baked with love and seasoned with tradition.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 space-y-6">
+<div class="bg-surface-container p-6 rounded-xl shadow-sm border border-surface-dim hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-2 h-full bg-secondary"></div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-2">The Beginning</h3>
+<p class="font-body text-on-surface-variant">Founded with a simple mission: to bring the authentic taste of homemade namkeen to everyone. We started small, focusing purely on quality and that nostalgic flavor.</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl shadow-sm border border-surface-dim hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary-container"></div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-2">Growing the Family</h3>
+<p class="font-body text-on-surface-variant">As word spread, so did our reach. We expanded our product line to include farali, sev, and unique localized flavors, becoming a staple in regional households.</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl shadow-sm border border-surface-dim hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-2 h-full bg-tertiary"></div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-2">Modern Innovation</h3>
+<p class="font-body text-on-surface-variant">Today, we blend traditional recipes with state-of-the-art manufacturing to ensure every packet of Vraj Namkeen delivers consistent crunch, hygiene, and unparalleled taste.</p>
+</div>
+</div>
+<div class="order-1 md:order-2 relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+<img alt="Assorted Vraj Namkeen Products" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" data-alt="A beautifully arranged collage of various Vraj Namkeen snack packets displayed on a rustic wooden background. The vibrant packaging of Aloo Sev, Masala Vatana, and other savory treats creates a colorful, appetizing composition typical of premium Indian FMCG marketing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB20n2StontQOzehaMAwFGjyJ0yTTBWwOYUHvGzDUj6fSFWgwYHrDbeUWEudWdRGDr3gJA5DqrogPaCvP7zDnnQNmNrxzxCi_1ebxSNzsN7Khn1JgY7T5KxG9CEnoOFq2jj7zfRXOiAwXtPhr3Y5HUhiEuURpzHd48QAeAJ-jnet-Xdugm_GfPXIRRPi_neMXOjlilVCP2K5u7dIARmXgg-vp3vYpQmSEOmC1-Co4MJ2EH3tjcUXDCLWb1UXTE9BoUwYnTXM2sZQ4">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<span class="font-headline text-3xl font-bold text-secondary-fixed block">100+</span>
+<span class="font-body text-sm font-medium">Delicious Varieties</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision & Mission (Bento Grid Style) -->
+<section class="py-20 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(200px,auto)]">
+<!-- Vision Card (Spans 7 cols) -->
+<div class="md:col-span-7 bg-primary text-on-primary rounded-2xl p-8 relative overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-300">
+<div class="absolute -right-10 -top-10 opacity-10 transform group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[200px]" data-icon="visibility">visibility</span>
+</div>
+<div class="relative z-10 flex flex-col justify-between h-full">
+<div>
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4 text-primary-fixed">Our Vision</h3>
+<p class="font-body text-lg text-on-primary-container leading-relaxed">
+                                    To be the globally recognized symbol of authentic Indian snacking, bringing the diverse, vibrant flavors of our heritage to tables across the world while setting the highest standards for quality and hygiene.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Mission Card (Spans 5 cols) -->
+<div class="md:col-span-5 bg-surface-container-highest rounded-2xl p-8 relative overflow-hidden shadow-sm border border-outline-variant group hover:border-primary transition-colors duration-300">
+<div class="relative z-10 flex flex-col justify-between h-full">
+<div>
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Our Mission</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                    To delight our consumers every day by crafting high-quality, innovative namkeen products using pure ingredients, traditional recipes, and sustainable practices that ensure 'Har Dil Ki Peheli Pasand' remains our truth.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values Section -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-bold text-primary mb-4">Our Core Values</h2>
+<p class="font-body text-on-surface-variant max-w-2xl mx-auto text-lg">The principles that guide every batch we fry, every packet we seal, and every smile we aim to create.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Value 1 -->
+<div class="flex flex-col items-center text-center p-6 rounded-xl hover:bg-surface-container-low transition-colors group">
+<div class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="verified">verified</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-2">Uncompromising Quality</h4>
+<p class="font-body text-sm text-on-surface-variant">Using only the finest ingredients, ensuring every bite is consistently premium.</p>
+</div>
+<!-- Value 2 -->
+<div class="flex flex-col items-center text-center p-6 rounded-xl hover:bg-surface-container-low transition-colors group">
+<div class="w-16 h-16 bg-secondary text-on-secondary rounded-full flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="restaurant_menu">restaurant_menu</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-2">Authentic Taste</h4>
+<p class="font-body text-sm text-on-surface-variant">Preserving the rich, traditional recipes that define real Indian namkeen.</p>
+</div>
+<!-- Value 3 -->
+<div class="flex flex-col items-center text-center p-6 rounded-xl hover:bg-surface-container-low transition-colors group">
+<div class="w-16 h-16 bg-tertiary text-on-tertiary rounded-full flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="lightbulb">lightbulb</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-2">Continuous Innovation</h4>
+<p class="font-body text-sm text-on-surface-variant">Evolving our flavors and packaging to meet modern tastes while honoring roots.</p>
+</div>
+<!-- Value 4 -->
+<div class="flex flex-col items-center text-center p-6 rounded-xl hover:bg-surface-container-low transition-colors group">
+<div class="w-16 h-16 bg-primary-fixed-dim text-on-primary-fixed rounded-full flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="group">group</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-2">Customer First</h4>
+<p class="font-body text-sm text-on-surface-variant">Driven by the joy and satisfaction of the families who choose us daily.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface font-body text-base full-width bottom border-t border-outline-variant dark:border-outline flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-4">
+<span class="font-headline font-semibold text-xl text-primary dark:text-primary-fixed">Vraj Namkeen</span>
+<p class="text-secondary dark:text-secondary-fixed">
+                    © 2024 Vraj Namkeen. All Rights Reserved. Crafted with tradition.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-3">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-150 hover:opacity-80 w-fit" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-150 hover:opacity-80 w-fit" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-150 hover:opacity-80 w-fit" href="#">Manufacturing Units</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-3">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-150 hover:opacity-80 w-fit" href="#">Quality Standards</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-opacity duration-150 hover:opacity-80 w-fit" href="#">Career</a>
+</div>
+</div>
+</footer>
+</body></html>

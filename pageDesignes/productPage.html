@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Products | Vraj Namkeen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#006e2c",
+                        "surface-bright": "#fef9ee",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#f0c12c",
+                        "on-secondary-fixed-variant": "#584400",
+                        "error": "#ba1a1a",
+                        "surface": "#fef9ee",
+                        "on-surface-variant": "#414753",
+                        "outline-variant": "#c1c6d5",
+                        "surface-container-highest": "#e7e2d7",
+                        "secondary": "#755b00",
+                        "primary-fixed-dim": "#6cdd80",
+                        "on-secondary-container": "#6f5600",
+                        "inverse-surface": "#323029",
+                        "on-primary-fixed-variant": "#00531f",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#fccc38",
+                        "secondary-fixed": "#ffdf90",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary-fixed": "#ffd8ec",
+                        "on-surface": "#1d1c15",
+                        "primary-fixed": "#88fb9a",
+                        "surface-container": "#f2ede3",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#006b2a",
+                        "inverse-primary": "#6cdd80",
+                        "background": "#fef9ee",
+                        "surface-dim": "#dedacf",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e7e2d7",
+                        "surface-container-high": "#ede8dd",
+                        "primary-container": "#008738",
+                        "outline": "#717785",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffaddf",
+                        "tertiary": "#aa0d89",
+                        "on-tertiary-fixed": "#3b002e",
+                        "on-primary-container": "#f7fff2",
+                        "on-secondary-fixed": "#241a00",
+                        "on-background": "#1d1c15",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#87006c",
+                        "inverse-on-surface": "#f5f0e5",
+                        "tertiary-container": "#ca33a4",
+                        "surface-container-low": "#f8f3e8",
+                        "on-primary-fixed": "#002108"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "sm": "0.25rem",
+                        "md": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "base": "8px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "xl": "48px",
+                        "gutter": "16px",
+                        "margin": "24px"
+                    },
+                    fontFamily: {
+                        "headline": ["Baloo 2", "sans-serif"],
+                        "display": ["Baloo 2", "sans-serif"],
+                        "body": ["Poppins", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Poppins', sans-serif; background-color: #fef9ee; color: #1d1c15; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Baloo 2', sans-serif; }
+        .label-text { font-family: 'Inter', sans-serif; }
+        
+        /* Modal Transitions */
+        .modal-overlay { opacity: 0; transition: opacity 0.3s ease-in-out; pointer-events: none; }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal-content { transform: scale(0.95) translateY(10px); opacity: 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .modal-overlay.active .modal-content { transform: scale(1) translateY(0); opacity: 1; }
+
+        /* Custom Scrollbar for chips */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-primary shadow-md">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<!-- Brand Logo -->
+<div class="flex items-center gap-2">
+<span class="text-2xl font-headline font-bold text-on-primary">Vibrant Namkeen</span>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-primary/80 hover:text-on-primary transition-colors font-label font-medium hover:bg-primary-container/10 px-3 py-2 rounded-md duration-200" href="#">Home</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors font-label font-medium hover:bg-primary-container/10 px-3 py-2 rounded-md duration-200" href="#">About</a>
+<a aria-current="page" class="text-secondary-fixed font-bold border-b-2 border-secondary-fixed pb-1 font-label font-medium px-3 py-2 rounded-md transition-colors duration-200" href="#">Products</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors font-label font-medium hover:bg-primary-container/10 px-3 py-2 rounded-md duration-200" href="#">Distribution</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors font-label font-medium hover:bg-primary-container/10 px-3 py-2 rounded-md duration-200" href="#">Contact</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center space-x-4">
+<button class="hidden md:flex bg-secondary-container text-on-secondary-container font-label font-medium px-4 py-2 rounded scale-95 active:scale-90 transition-transform hover:bg-secondary-fixed">
+                    Shop Now
+                </button>
+<button aria-label="shopping_cart" class="text-on-primary p-2 rounded-full hover:bg-primary-container/10 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button aria-label="menu" class="md:hidden text-on-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-surface-container-low py-16 lg:py-24 overflow-hidden border-b border-surface-dim">
+<!-- Decorative Background Element -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-72 h-72 bg-tertiary-container rounded-full mix-blend-multiply filter blur-3xl opacity-10 translate-y-1/2 -translate-x-1/2"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary mb-6">Our Authentic Snack Collection</h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-body max-w-2xl mx-auto">
+                    Discover a world of flavor with our carefully crafted namkeens. From timeless classics to bold new crunches, find your perfect snack companion.
+                </p>
+</div>
+</section>
+<!-- Product Listing Area -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+<!-- Category Filter Bar -->
+<div class="mb-10 overflow-x-auto hide-scrollbar">
+<div class="flex items-center gap-3 whitespace-nowrap pb-2">
+<button class="px-5 py-2.5 rounded-full font-label text-sm font-medium transition-all duration-200 bg-tertiary text-on-tertiary shadow-sm">
+                        All
+                    </button>
+<button class="px-5 py-2.5 rounded-full font-label text-sm font-medium transition-all duration-200 bg-surface-container hover:bg-surface-container-high text-on-surface">
+                        Classic Namkeen
+                    </button>
+<button class="px-5 py-2.5 rounded-full font-label text-sm font-medium transition-all duration-200 bg-surface-container hover:bg-surface-container-high text-on-surface">
+                        Spicy Pellets
+                    </button>
+<button class="px-5 py-2.5 rounded-full font-label text-sm font-medium transition-all duration-200 bg-surface-container hover:bg-surface-container-high text-on-surface">
+                        Corn Puffs
+                    </button>
+<button class="px-5 py-2.5 rounded-full font-label text-sm font-medium transition-all duration-200 bg-surface-container hover:bg-surface-container-high text-on-surface">
+                        Popcorn
+                    </button>
+<button class="px-5 py-2.5 rounded-full font-label text-sm font-medium transition-all duration-200 bg-surface-container hover:bg-surface-container-high text-on-surface">
+                        Extruded Fryums
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Product Display -->
+<div class="flex justify-between items-center mb-6">
+<p class="text-sm font-body text-on-surface-variant font-medium">Showing 1-10 of 42 products</p>
+<div class="hidden md:flex items-center gap-2 text-sm font-label text-on-surface-variant">
+<span>Sort by:</span>
+<select class="bg-transparent border-none focus:ring-0 font-semibold text-primary cursor-pointer">
+<option>Default</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+<!-- Product Card 1 (Classic) -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<img alt="Vraj Namkeen Classic Collection Packs" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWY-yLf5aTsZ-rgatjFcjjLc7Ob3F-TlES-2N7zAcA_6VV4-pzmn-460BQsQg8V3-hCmxvE4Y_ZvvgZFFtlcN4pdSCX1E1vIfEcMlvfegtkuUd1T8R03hoqSGbXDcuKGd_NEcOIvTuyjk34hLBfIoJVb5iQvm-geOS8DWRaVNOcAyvT5dulOzUainX1UlFMK43UyL7Iy_lKbEzApUgRnBJshDj5uUkXY-BQ8GJNCHHm3-aLYRvEo07lF4wtVGqadgLDOwwnVYQza0"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary text-xs font-bold px-2 py-1 rounded font-label z-10">Best Seller</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Classic Namkeen</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Sing Bhujiya</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Crispy, spiced peanut snacks perfect for any time munching.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">₹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+                                View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center relative overflow-hidden" data-alt="A studio quality product shot of a shiny blue snack packet labeled 'Masala Magic' resting on a clean wooden surface. The packet is slightly angled, catching bright, natural-looking studio light that highlights its glossy texture. The background is a soft, blurred light cream color, enhancing the vibrant blue of the packaging. The overall mood is appetizing and modern.">
+<!-- Placeholder for actual product image slice from IMAGE_9 -->
+<span class="material-symbols-outlined text-6xl text-blue-500/50">local_pizza</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Spicy Pellets</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Masala Magic Chips</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Potato chips tossed in our secret tangy masala blend.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">₹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+                                View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center relative overflow-hidden" data-alt="A high-resolution product shot of a bright green snack packet labeled 'Tomato Ring' on a pristine white surface. Soft, diffused lighting casts a gentle shadow, emphasizing the packet's smooth, crinkled texture. The scene feels fresh, vibrant, and energetic, perfectly suited for a modern e-commerce snack store.">
+<span class="material-symbols-outlined text-6xl text-green-600/50">donut_large</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Extruded Fryums</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Tomato Ring</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Crunchy ring-shaped fryums with a sweet and tangy tomato flavor.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">₹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+                                View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg flex items-center justify-center relative overflow-hidden" data-alt="A clean, vibrant studio shot of an orange snack pouch labeled 'Chana Dal'. The pouch sits upright against a warm, soft cream background, illuminated by bright, appealing lighting that makes the packaging colors pop. The overall aesthetic is appetizing and perfectly aligns with a premium FMCG brand style.">
+<span class="material-symbols-outlined text-6xl text-orange-500/50">grain</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Classic Namkeen</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Chana Dal</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Spicy, roasted split chickpea snack. A traditional favorite.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">₹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+                                View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 5 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-yellow-600/50">bakery_dining</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Corn Puffs</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Cheese Balls</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Air-popped corn puffs with a rich and creamy cheddar cheese coating.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">‹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 6 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-red-600/50">fireplace</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Spicy Pellets</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Peri Peri Rings</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Fiery and zesty rings for those who love an extra kick of spice.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">‹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 7 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-teal-100 to-teal-200 rounded-lg flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-teal-600/50">set_meal</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Classic Namkeen</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Aloo Bhujia</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">The timeless classic thin noodles made from potato and chickpea flour.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">‹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 8 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-purple-600/50">stars</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Popcorn</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Caramel Crunch</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Sweet and buttery popcorn with a perfect golden caramel glaze.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">‹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 9 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-orange-200 to-orange-300 rounded-lg flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-orange-700/50">lunch_dining</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Extruded Fryums</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Wheels Classic</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Light and crunchy wheel-shaped snacks, a nostalgia trip in every bite.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">‹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 10 -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md border border-surface-dim overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" onclick="openModal('modal-1')">
+<div class="aspect-square relative bg-surface-container overflow-hidden p-6 flex items-center justify-center">
+<div class="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 rounded-lg flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-pink-600/50">icecream</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow bg-white">
+<span class="text-xs font-label text-tertiary mb-2 uppercase tracking-wider font-semibold">Popcorn</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface mb-2 leading-tight">Magic Butter</h3>
+<p class="text-sm font-body text-on-surface-variant mb-4 line-clamp-2">Classic movie-style buttered popcorn, fluffy and delicious.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-label font-bold text-primary text-lg">‹5.00</span>
+<button class="text-sm font-label font-medium text-primary flex items-center gap-1 group-hover:text-primary-container transition-colors">
+View Details <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article></div><div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+<nav aria-label="Pagination" class="flex items-center gap-1">
+<button class="p-2 rounded-lg border border-surface-dim text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1 text-sm font-label font-medium">
+<span class="material-symbols-outlined text-lg">chevron_left</span> Previous
+        </button>
+<div class="flex items-center gap-1 px-4">
+<button class="w-10 h-10 rounded-lg bg-primary text-on-primary font-label font-bold text-sm shadow-sm">1</button>
+<button class="w-10 h-10 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors font-label font-medium text-sm">2</button>
+<button class="w-10 h-10 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors font-label font-medium text-sm">3</button>
+<button class="w-10 h-10 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors font-label font-medium text-sm">4</button>
+<span class="w-10 h-10 flex items-center justify-center text-on-surface-variant text-sm">...</span>
+</div>
+<button class="p-2 rounded-lg border border-surface-dim text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1 text-sm font-label font-medium">
+            Next <span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</nav>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-highest border-t border-outline-variant mt-auto z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 space-y-4 md:space-y-0 max-w-7xl mx-auto">
+<!-- Brand Logo -->
+<div class="text-xl font-headline font-semibold text-primary">
+                Vibrant Namkeen
+            </div>
+<!-- Links -->
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label text-xs text-on-surface-variant hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-label text-xs text-on-surface-variant hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-label text-xs text-on-surface-variant hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
+<a class="font-label text-xs text-on-surface-variant hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Bulk Orders</a>
+</div>
+<!-- Copyright -->
+<div class="font-body text-sm text-on-surface-variant text-center md:text-right">
+                © 2024 Vibrant Harmony Namkeen. All rights reserved. Crafted with flavor.
+            </div>
+</div>
+</footer>
+<!-- Product Detail Modal (Hidden by default) -->
+<div class="modal-overlay fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-inverse-surface/60 backdrop-blur-sm" id="modal-1">
+<div class="modal-content bg-surface-container-lowest rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl border border-surface-dim flex flex-col md:flex-row">
+<!-- Close Button (Mobile Absolute) -->
+<button aria-label="Close modal" class="md:hidden absolute top-4 right-4 p-2 bg-surface rounded-full text-on-surface shadow-sm z-10" onclick="closeModal('modal-1')">
+<span class="material-symbols-outlined">close</span>
+</button>
+<!-- Product Image Area -->
+<div class="w-full md:w-1/2 bg-surface-container p-8 flex items-center justify-center relative">
+<img alt="Vraj Namkeen Travel Pack Collection" class="w-full max-w-sm object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK-8SUGv3u9-yjTYBLmdfNAiwHkTYr9XQQWmRpvU92kaRm_AqDTkghtEmdMRgjaw2gW9fhs3hAWUd1SpImxrqs8csd8FaXyP4oL3SmQju4tSRLhcEUjNHeIONreJOilkvdiIyDclJihisfNl9UNTWXX9PMsUvV7_RwQgxDLXYNXhqgOhr3xQU5fOsVgkNXHlMZej_fet9GLfQhRVauTq8whv_xdMdWBOvDFDXoKxac2qRNUiLXGhRbab7_ycMF1PGYLVTzgyHmhlY"/>
+</div>
+<!-- Product Details Area -->
+<div class="w-full md:w-1/2 p-8 md:p-10 flex flex-col bg-white">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="inline-block px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs font-label font-semibold rounded-full mb-3">Classic Namkeen</span>
+<h2 class="text-3xl font-headline font-bold text-on-surface leading-tight">Sing Bhujiya</h2>
+</div>
+<!-- Close Button (Desktop) -->
+<button aria-label="Close modal" class="hidden md:flex p-2 text-on-surface-variant hover:text-error transition-colors rounded-full hover:bg-error-container" onclick="closeModal('modal-1')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="text-2xl font-headline font-semibold text-primary mb-6">₹5.00 <span class="text-sm font-body text-on-surface-variant font-normal">/ pack</span></p>
+<div class="space-y-6 flex-grow">
+<div>
+<h4 class="font-label font-semibold text-on-surface mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">description</span> Description
+                        </h4>
+<p class="text-body text-sm text-on-surface-variant leading-relaxed">
+                            Experience the authentic taste of tradition with our Sing Bhujiya. Premium quality peanuts are carefully coated in a spiced gram flour batter and deep-fried to golden perfection. It's the ultimate crunchy, savory snack that's 'Har Ghar Ki Pasand' (Loved by every home).
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface p-4 rounded-lg border border-surface-dim">
+<h4 class="font-label font-semibold text-on-surface text-xs mb-1 uppercase tracking-wider text-outline">Pack Size</h4>
+<p class="font-body text-sm text-on-surface-variant font-medium">Standard ₹5 Pouch</p>
+</div>
+<div class="bg-surface p-4 rounded-lg border border-surface-dim">
+<h4 class="font-label font-semibold text-on-surface text-xs mb-1 uppercase tracking-wider text-outline">Shelf Life</h4>
+<p class="font-body text-sm text-on-surface-variant font-medium">6 Months</p>
+</div>
+</div>
+<div>
+<h4 class="font-label font-semibold text-on-surface mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">restaurant</span> Ingredients
+                        </h4>
+<p class="text-body text-xs text-on-surface-variant leading-relaxed bg-surface-container-low p-3 rounded-md">
+                            Peanuts, Edible Vegetable Oil (Palmolein), Gram Flour (Besan), Spices &amp; Condiments (Chilli Powder, Cumin Powder, Black Pepper, Clove Powder), Edible Common Salt.
+                        </p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-dim flex gap-4">
+<button class="flex-1 bg-primary text-on-primary font-label font-semibold py-3 px-6 rounded-lg hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                        Add to Order
+                    </button>
+<button aria-label="Add to favorites" class="p-3 border border-outline text-on-surface rounded-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts for Interaction -->
+<script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if(modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if(modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+
+        // Close modal when clicking outside the content
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal(this.id);
+                }
+            });
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const activeModal = document.querySelector('.modal-overlay.active');
+                if (activeModal) {
+                    closeModal(activeModal.id);
+                }
+            }
+        });
+    </script>
+</body></html>

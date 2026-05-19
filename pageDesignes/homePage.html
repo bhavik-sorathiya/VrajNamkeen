@@ -1,0 +1,549 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Vraj Namkeen - Har Dil Ki Peheli Pasand</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Plus Jakarta Sans for headings, Poppins for body -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#006e2c",
+                        "on-background": "#1d1c15",
+                        "secondary": "#755b00",
+                        "on-surface-variant": "#414753",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#006b2a",
+                        "surface-bright": "#fef9ee",
+                        "secondary-container": "#fccc38",
+                        "on-tertiary-fixed-variant": "#87006c",
+                        "background": "#fef9ee",
+                        "surface-container": "#f2ede3",
+                        "surface-variant": "#e7e2d7",
+                        "inverse-primary": "#6cdd80",
+                        "inverse-on-surface": "#f5f0e5",
+                        "inverse-surface": "#323029",
+                        "on-tertiary-fixed": "#3b002e",
+                        "on-secondary-container": "#6f5600",
+                        "tertiary": "#aa0d89",
+                        "on-primary-fixed-variant": "#00531f",
+                        "surface-container-highest": "#e7e2d7",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffd8ec",
+                        "primary-fixed": "#88fb9a",
+                        "tertiary-fixed-dim": "#ffaddf",
+                        "tertiary-container": "#ca33a4",
+                        "surface-container-high": "#ede8dd",
+                        "on-secondary-fixed-variant": "#584400",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1d1c15",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fef9ee",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c1c6d5",
+                        "outline": "#717785",
+                        "surface-dim": "#dedacf",
+                        "secondary-fixed-dim": "#f0c12c",
+                        "on-primary-container": "#f7fff2",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f8f3e8",
+                        "secondary-fixed": "#ffdf90",
+                        "primary-container": "#008738",
+                        "on-primary-fixed": "#002108",
+                        "primary-fixed-dim": "#6cdd80",
+                        "on-tertiary-container": "#fffbff",
+                        "brand-pink": "#e6007e", // Added from logo
+                        "brand-green": "#009639", // Added from logo
+                        "brand-yellow": "#ffce00" // Added from logo
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "sm": "0.25rem",
+                        "md": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "xl": "48px",
+                        "gutter": "16px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "headline": ["'Plus Jakarta Sans'", "sans-serif"],
+                        "display": ["'Plus Jakarta Sans'", "sans-serif"],
+                        "body": ["Poppins", "sans-serif"],
+                        "label": ["Poppins", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["36px", { lineHeight: "1.2", fontWeight: "700" }],
+                        "headline-md": ["28px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-sm": ["13px", { lineHeight: "1", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Carousel Animations */
+        @keyframes slideRight {
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        .hero-slide {
+            display: none;
+            animation: slideRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        .hero-slide.active {
+            display: block;
+        }
+
+        /* Bento Grid Hover Effects */
+        .bento-card {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 150, 57, 0.15), 0 10px 10px -5px rgba(0, 150, 57, 0.08);
+        }
+
+        /* Product Circular Dial Animation */
+        .product-dial-item {
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .product-dial-item:hover {
+            transform: scale(1.1) rotate(5deg) translateY(-10px);
+            z-index: 10;
+            filter: drop-shadow(0 20px 20px rgba(0,0,0,0.15));
+        }
+
+        /* Category Poster Overlay */
+        .category-poster::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 150, 57, 0.9) 0%, rgba(0, 150, 57, 0.3) 50%, transparent 100%);
+            opacity: 0.6;
+            transition: opacity 0.4s ease;
+        }
+        .category-poster:hover::after {
+            opacity: 0.9;
+        }
+        .category-content {
+            transform: translateY(10px);
+            transition: all 0.4s ease;
+        }
+        .category-poster:hover .category-content {
+            transform: translateY(0);
+        }
+
+        /* Logo blend mode */
+        .logo-blend {
+            mix-blend-mode: multiply;
+            filter: contrast(1.1);
+        }
+        
+        /* Modern Navbar gradient */
+        .navbar-gradient {
+            background: linear-gradient(135deg, rgba(0, 107, 42, 0.95) 0%, rgba(0, 150, 57, 0.95) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky navbar-gradient shadow-md z-50 border-b border-white/10">
+<div class="flex justify-between items-center px-margin py-3 max-w-7xl mx-auto">
+<!-- Brand Logo -->
+<a class="flex items-center gap-2" href="#">
+<img alt="Vraj Namkeen" class="h-16 w-auto logo-blend rounded-xl p-1 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuz5GaS0NEC8IbL7g1fl1SBmlf-XCk2uDVdDQXdP2A2XMLvl46cXBe6dq9z4KiwKPpjII0GbFDUFsUTm1WFfJvxpFWyc0MhanyYGtjVarXvNLEh0pYK2NNZ46m3sazRQE-gP54TyJN_w8yelDEs1XETh0JCTqFreBZENU0Ax7H3H23zBgEJaYnGEy71e57N_1sIzuXwNeMSdc8eBn0UB34Tx4BL3y1Dzb5FHfonWJfHDJ3qx9Fw8IkhQv100GAzmPX8aTJKT4UBQ8">
+</a>
+<!-- Navigation Links (Hidden on Mobile) -->
+<nav class="hidden md:flex gap-8 items-center bg-white/5 px-6 py-2 rounded-full border border-white/10">
+<a class="text-white font-bold border-b-2 border-brand-yellow pb-1 font-body text-body-md hover:text-brand-yellow transition-all active:scale-95 duration-200" href="#">
+                    Home
+                </a>
+<a class="text-white/80 hover:text-brand-yellow transition-colors font-body text-body-md active:scale-95 duration-200" href="#">
+                    About
+                </a>
+<a class="text-white/80 hover:text-brand-yellow transition-colors font-body text-body-md active:scale-95 duration-200" href="#">
+                    Products
+                </a>
+<a class="text-white/80 hover:text-brand-yellow transition-colors font-body text-body-md active:scale-95 duration-200" href="#">
+                    Distribution
+                </a>
+<a class="text-white/80 hover:text-brand-yellow transition-colors font-body text-body-md active:scale-95 duration-200" href="#">
+                    Contact
+                </a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-md">
+<button class="hidden md:flex items-center gap-2 bg-brand-yellow text-on-background px-lg py-sm rounded-full font-label text-label-sm font-bold hover:bg-yellow-400 transition-all active:scale-95 shadow-[0_0_15px_rgba(255,206,0,0.4)]">
+                    Become a Distributor
+                    <span class="material-symbols-outlined text-[18px]">storefront</span>
+</button>
+<button class="md:hidden text-white p-sm rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- 1. Hero Section -->
+<section class="relative w-full h-[80vh] min-h-[600px] overflow-hidden bg-surface-container-lowest">
+<!-- Carousel Container -->
+<div class="relative w-full h-full" id="hero-carousel">
+<!-- Slide 1 -->
+<div class="hero-slide active w-full h-full absolute inset-0">
+<div class="absolute inset-0 z-0">
+<img alt="The Best Travel Companions" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvxRYuBUw0FOSdKgixOxL8l9gxZmBZbYNib389fTGNwnbWhEa_ZGcjymw5A6K9eayOc3PmzFyzVuB-9WNtitu6Bzb_lkgqAac9xhd7G0ItB58rKls6TcxXxcEtLbtCtNZpTpGwtEQICSmLw8Esrt6bsibOZYoixXaE8Fzd2BIJaYnhRqHJ7gv0_GligbvXWB5wIm1uu-PHmhFTg5g6ObnGdIsWmcTRUPuPJchKfyFRdqJf0nxfAjExrjhG15RAfYMlU8eEb10Wji0">
+<div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 h-full max-w-7xl mx-auto px-margin flex flex-col justify-center items-start"><div class="max-w-2xl bg-surface/90 p-6 md:p-8 rounded-2xl backdrop-blur-sm border border-white/50 shadow-xl m-auto md:m-0">
+<span class="inline-block py-xs px-sm bg-brand-yellow text-secondary rounded-full font-label text-[10px] md:text-label-sm uppercase tracking-wider mb-sm font-bold">Premium Quality</span>
+<h1 class="font-headline text-headline-md md:text-[56px] text-on-surface leading-tight mb-md drop-shadow-sm">
+Har Dil Ki <br>
+<span class="text-brand-green">Peheli Pasand</span>
+</h1>
+<p class="font-body text-sm md:text-body-md text-on-surface-variant mb-lg max-w-lg">
+Experience the authentic taste of tradition in every bite. Crafted with the finest ingredients and a legacy of flavor.
+</p>
+<div class="flex gap-md">
+<button class="bg-brand-green text-white px-lg py-md rounded-full font-label text-label-sm font-bold shadow-lg shadow-brand-green/30 hover:bg-primary-container transition-all active:scale-95 flex items-center gap-xs">
+Explore Products
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div></div>
+</div>
+<!-- Slide 2 -->
+<div class="hero-slide w-full h-full absolute inset-0 hidden">
+<div class="absolute inset-0 z-0">
+<img alt="All Time Travelling Partner" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmyWcQKK8bq75-FGhDPL6-jpeoJupvHEBh8FbEESg45vWy8k59ty-BxIZkmvf_M_0bedYL0amNikPwh1fUdq32GHsmr2o17MmckBaoFMVTlEI-J19-spsCDJBv2EiV7PGGI0-e1Zw7Ai3sDlvp0Je4sYyxSFcjuA33nwmpeEwC2-NDmDc2Ot4PCXcN8TXtZeKUhfgmDEZI_qEHGL6H-5zoa_Lx_4H5AUw6wa0ls5f_vAZz30Lj2w2QxzpBMA7EZ8DlVH-vceggcMM">
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="hero-slide w-full h-full absolute inset-0 hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Sit Back &amp; Relax" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkXBkCtJmAOcYbDFi_7EXVqMuQFtzjfjar38X_1fvbgyqK2DjXdgyUyf5tCaUNRskj3jQvwXoOlNTCVi76shQ1VUtcEu_jrsS2ttafTy_btojJJqTOKKHvJnfqNWCwz6-TKqZfOUb1dYxKXxHwzrapvnORhVNsuVLOR-4hz9wtrnZiD5Fke9KMM4Gj0AD5zVQ_d_yfAuZflLY9-quEdtBQ3MpjGRe3AyN01cPIkkOafljVu8JpF5kyA0_qRcDKZNwZz0krd1O3RRo">
+</div>
+</div>
+</div>
+<!-- Carousel Controls -->
+<div class="absolute bottom-lg left-0 right-0 z-20 flex justify-center gap-sm">
+<button class="w-12 h-3 rounded-full bg-brand-yellow transition-all shadow-md" onclick="changeSlide(0)"></button>
+<button class="w-8 h-3 rounded-full bg-white/50 hover:bg-white/80 backdrop-blur-sm transition-all" onclick="changeSlide(1)"></button>
+<button class="w-8 h-3 rounded-full bg-white/50 hover:bg-white/80 backdrop-blur-sm transition-all" onclick="changeSlide(2)"></button>
+</div>
+</section>
+<!-- 2. Brand Features (Advanced Bento Grid) -->
+<section class="py-xl bg-surface relative overflow-hidden">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-brand-yellow/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+<div class="max-w-7xl mx-auto px-margin relative z-10">
+<div class="text-center mb-xl">
+<h2 class="font-headline text-headline-lg text-on-surface mb-sm">Why Choose Vraj?</h2>
+<p class="font-body text-body-md text-on-surface-variant max-w-2xl mx-auto">Our commitment to excellence is baked into every batch.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 md:gap-md md:h-[500px]">
+<div class="bento-card col-span-1 md:col-span-2 md:row-span-2 bg-gradient-to-br from-surface-container-low to-surface-container rounded-2xl p-6 md:p-lg relative overflow-hidden flex flex-col justify-end border border-outline-variant/30 shadow-sm">
+<div class="absolute top-0 right-0 w-64 h-64 bg-brand-green/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+<div class="absolute top-8 right-8 text-brand-green/20">
+<span class="material-symbols-outlined text-[80px] md:text-[120px]">verified</span>
+</div>
+<div class="relative z-10 bg-white/60 backdrop-blur-md p-6 rounded-xl border border-white/50">
+<div class="w-14 h-14 md:w-16 md:h-16 bg-brand-green text-white rounded-2xl shadow-lg flex items-center justify-center mb-md transform -translate-y-10 -mb-4">
+<span class="material-symbols-outlined text-[28px] md:text-[32px]">workspace_premium</span>
+</div>
+<h3 class="font-headline text-headline-sm md:text-headline-md text-on-surface mb-xs">Uncompromising Quality</h3>
+<p class="font-body text-sm md:text-body-md text-on-surface-variant max-w-xl">We source only the finest raw ingredients. Our state-of-the-art facilities ensure that every packet meets rigorous hygiene and taste standards.</p>
+</div>
+</div>
+<div class="bento-card col-span-1 bg-gradient-to-br from-brand-yellow/20 to-brand-yellow/5 rounded-2xl p-6 md:p-lg flex flex-col justify-between border border-brand-yellow/20">
+<div class="w-12 h-12 bg-brand-yellow text-secondary rounded-xl shadow-md flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-[24px]">local_fire_department</span>
+</div>
+<div>
+<h3 class="font-headline text-[20px] md:text-[22px] font-bold text-on-surface mb-xs">Authentic Recipes</h3>
+<p class="font-body text-sm text-on-surface-variant">Traditional spice blends passed down through generations.</p>
+</div>
+</div>
+<div class="bento-card col-span-1 bg-gradient-to-br from-brand-green/20 to-brand-green/5 rounded-2xl p-6 md:p-lg flex flex-col justify-between border border-brand-green/20">
+<div class="w-12 h-12 bg-brand-green text-white rounded-xl shadow-md flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-[24px]">eco</span>
+</div>
+<div>
+<h3 class="font-headline text-[20px] md:text-[22px] font-bold text-on-surface mb-xs">100% Fresh</h3>
+<p class="font-body text-sm text-on-surface-variant">Nitrogen-flushed packaging seals in the crispiness.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Product Categories (Poster Style) -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-headline text-headline-lg text-on-surface mb-sm">Our Assortment</h2>
+<p class="font-body text-body-md text-on-surface-variant">A flavor for every mood and every moment.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-gutter">
+<div class="category-poster relative h-48 md:h-80 rounded-2xl overflow-hidden group cursor-pointer bg-surface-container shadow-md border border-outline-variant/20">
+<div class="absolute inset-0 bg-brand-yellow/20 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 flex items-center justify-center">
+<span class="material-symbols-outlined text-[60px] md:text-[100px] text-brand-yellow opacity-40">potato</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 md:p-md z-10 category-content text-center">
+<h3 class="font-headline text-lg md:text-headline-md text-white mb-xs drop-shadow-md">Potato Chips</h3>
+<span class="hidden md:inline-block bg-brand-yellow text-secondary px-4 py-2 rounded-full font-label text-[12px] font-bold uppercase shadow-lg">Explore</span>
+</div>
+</div>
+<div class="category-poster relative h-48 md:h-80 rounded-2xl overflow-hidden group cursor-pointer bg-surface-container shadow-md border border-outline-variant/20">
+<div class="absolute inset-0 bg-brand-green/20 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 flex items-center justify-center">
+<span class="material-symbols-outlined text-[60px] md:text-[100px] text-brand-green opacity-40">tapas</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 md:p-md z-10 category-content text-center">
+<h3 class="font-headline text-lg md:text-headline-md text-white mb-xs drop-shadow-md">Namkeen</h3>
+<span class="hidden md:inline-block bg-brand-yellow text-secondary px-4 py-2 rounded-full font-label text-[12px] font-bold uppercase shadow-lg">Explore</span>
+</div>
+</div>
+<div class="category-poster relative h-48 md:h-80 rounded-2xl overflow-hidden group cursor-pointer bg-surface-container shadow-md border border-outline-variant/20">
+<div class="absolute inset-0 bg-brand-pink/20 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 flex items-center justify-center">
+<span class="material-symbols-outlined text-[60px] md:text-[100px] text-brand-pink opacity-40">fastfood</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 md:p-md z-10 category-content text-center">
+<h3 class="font-headline text-lg md:text-headline-md text-white mb-xs drop-shadow-md">Snacks</h3>
+<span class="hidden md:inline-block bg-brand-yellow text-secondary px-4 py-2 rounded-full font-label text-[12px] font-bold uppercase shadow-lg">Explore</span>
+</div>
+</div>
+<div class="category-poster relative h-48 md:h-80 rounded-2xl overflow-hidden group cursor-pointer bg-surface-container shadow-md border border-outline-variant/20">
+<div class="absolute inset-0 bg-tertiary/20 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 flex items-center justify-center">
+<span class="material-symbols-outlined text-[60px] md:text-[100px] text-tertiary opacity-40">category</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 md:p-md z-10 category-content text-center">
+<h3 class="font-headline text-lg md:text-headline-md text-white mb-xs drop-shadow-md">Fryums</h3>
+<span class="hidden md:inline-block bg-brand-yellow text-secondary px-4 py-2 rounded-full font-label text-[12px] font-bold uppercase shadow-lg">Explore</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Best Sellers Dial -->
+<section class="py-xl bg-surface overflow-hidden relative">
+<div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 50% 50%, #009639 2px, transparent 2px); background-size: 30px 30px;"></div>
+<div class="max-w-7xl mx-auto px-margin relative z-10">
+<div class="text-center mb-lg">
+<h2 class="font-headline text-headline-lg text-on-surface mb-sm">Fan Favorites</h2>
+<p class="font-body text-body-md text-on-surface-variant max-w-xl mx-auto">The snacks our customers keep coming back for.</p>
+</div>
+<!-- Simulated Circular Layout -->
+<div class="flex flex-wrap justify-center items-center gap-lg py-xl mt-lg relative flex-col md:flex-row">
+<!-- Center Anchor (Decorative) -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-brand-green/10 rounded-full blur-3xl z-0"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-[1px] border-dashed border-brand-green/30 rounded-full z-0 animate-[spin_60s_linear_infinite]"></div>
+<!-- Item 1 -->
+<div class="product-dial-item relative z-10 bg-white p-4 rounded-2xl shadow-xl border border-outline-variant/10 w-64 text-center cursor-pointer scale-90 md:scale-100">
+<div class="w-full h-48 bg-surface-container rounded-xl mb-md flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-[64px] text-brand-green/20">package</span>
+</div>
+<h4 class="font-headline text-[20px] font-bold text-on-surface mb-xs">Navratan Mix</h4>
+<div class="flex items-center justify-center gap-xs text-brand-yellow">
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+</div>
+</div>
+<!-- Item 2 (Center/Prominent) -->
+<div class="product-dial-item relative z-20 bg-white p-5 rounded-3xl shadow-2xl border-2 border-brand-green/20 w-80 text-center cursor-pointer scale-90 md:scale-100">
+<div class="absolute -top-4 -right-4 bg-brand-pink text-white px-4 py-1 rounded-full font-label text-[12px] font-bold shadow-lg">#1 SELLER</div>
+<div class="w-full h-64 bg-surface-container rounded-2xl mb-md flex items-center justify-center overflow-hidden relative">
+<!-- Fallback image since IMAGE_21 is not loaded -->
+<img alt="Ratlami Sev" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvxRYuBUw0FOSdKgixOxL8l9gxZmBZbYNib389fTGNwnbWhEa_ZGcjymw5A6K9eayOc3PmzFyzVuB-9WNtitu6Bzb_lkgqAac9xhd7G0ItB58rKls6TcxXxcEtLbtCtNZpTpGwtEQICSmLw8Esrt6bsibOZYoixXaE8Fzd2BIJaYnhRqHJ7gv0_GligbvXWB5wIm1uu-PHmhFTg5g6ObnGdIsWmcTRUPuPJchKfyFRdqJf0nxfAjExrjhG15RAfYMlU8eEb10Wji0">
+</div>
+<h4 class="font-headline text-[24px] font-bold text-on-surface mb-xs">Ratlami Sev</h4>
+<p class="font-body text-sm text-on-surface-variant mb-4">Spicy, crunchy, iconic.</p>
+<button class="w-full bg-brand-green text-white py-3 rounded-xl font-label text-label-sm font-bold hover:bg-green-700 transition-colors shadow-md">Add to Cart</button>
+</div>
+<!-- Item 3 -->
+<div class="product-dial-item relative z-10 bg-white p-4 rounded-2xl shadow-xl border border-outline-variant/10 w-64 text-center cursor-pointer scale-90 md:scale-100">
+<div class="w-full h-48 bg-surface-container rounded-xl mb-md flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-[64px] text-brand-green/20">package</span>
+</div>
+<h4 class="font-headline text-[20px] font-bold text-on-surface mb-xs">Khatta Meetha</h4>
+<div class="flex items-center justify-center gap-xs text-brand-yellow">
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Partnership Card (B2B Call to Action) -->
+<section class="py-xl bg-surface-container-low px-margin">
+<div class="max-w-5xl mx-auto">
+<div class="bg-gradient-to-r from-[#006b2a] to-[#009639] rounded-3xl overflow-hidden shadow-2xl relative flex flex-col md:flex-row items-center border border-white/10">
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1px, transparent 1px, transparent 10px);"></div>
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="p-12 relative z-10 md:w-3/5 text-center md:text-left">
+<span class="inline-block py-1 px-3 bg-white/20 text-white rounded-full font-label text-[12px] uppercase tracking-wider mb-6 font-bold backdrop-blur-md border border-white/20">Join the Network</span>
+<h2 class="font-headline text-headline-lg text-white mb-4 drop-shadow-md">Grow With Vraj Namkeen</h2>
+<p class="font-body text-body-md text-white/90 mb-8 leading-relaxed">
+                            We are expanding our distribution network across the country. Partner with a brand that guarantees quality, attractive margins, and consistent support. Let's deliver happiness to every home together.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="bg-brand-yellow text-secondary px-8 py-3 rounded-full font-label text-label-sm font-bold hover:bg-yellow-400 transition-all active:scale-95 shadow-lg flex justify-center items-center gap-2">
+                                Become a Distributor
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-3 rounded-full font-label text-label-sm font-bold hover:bg-white/20 transition-all active:scale-95 flex justify-center items-center gap-2">
+                                Download Brochure
+                                <span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<div class="md:w-2/5 p-8 hidden md:flex justify-center relative z-10">
+<div class="w-56 h-56 bg-white/10 backdrop-blur-md rounded-full relative shadow-[0_0_40px_rgba(255,255,255,0.1)] border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[100px] text-white fill drop-shadow-lg">handshake</span>
+<div class="absolute -bottom-2 -left-2 w-20 h-20 bg-brand-yellow rounded-full border-4 border-[#009639] flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-[36px] text-secondary">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Campaigns Media Gallery -->
+<section class="py-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-sm">
+<div>
+<h2 class="font-headline text-headline-lg text-on-surface mb-sm">In The Spotlight</h2>
+<p class="font-body text-body-md text-on-surface-variant">Check out our latest campaigns and commercials.</p>
+</div>
+<div class="flex gap-sm">
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-brand-green hover:text-white hover:border-brand-green transition-all shadow-sm">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-brand-green hover:text-white hover:border-brand-green transition-all shadow-sm">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Media Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden group border border-outline-variant/20 shadow-md hover:shadow-xl transition-all cursor-pointer">
+<div class="relative aspect-square md:aspect-[4/3] bg-surface-dim overflow-hidden">
+<img alt="A Table Filled With Snacks" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxR554H_bWcTNQqVcQV6FP0F7m7AUSSK7fx-w-oP_5urwUAHl8iXLYoHc_pPLkYmrMopQxWFJjsVbcoMs83U9jkePiiFR3aXn8J8GY-Iu6RF5aH-5Xa3pNg0TPk-duP2vbIStVE41KAF47pf9OVCB-GSXxK9ZVGAimdn5NocjfaFDnDZfFASjuX9qIxVGgqNH6uO9wEI4Eq5a_FcV5u1gg5goaEKUCJFGvgTY2B6LCGmboW9Stx_mL2RQKw7OwDGc03Pcb0nQel7M">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<span class="text-xs font-label font-bold text-brand-yellow mb-1 block uppercase tracking-wider">Print Campaign</span>
+<h3 class="font-headline text-[20px] font-bold text-white line-clamp-1">A Table Filled With Snacks</h3>
+</div>
+</div>
+</div>
+<!-- Media Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden group border border-outline-variant/20 shadow-md hover:shadow-xl transition-all cursor-pointer hidden sm:block">
+<div class="relative aspect-square md:aspect-[4/3] bg-surface-dim overflow-hidden">
+<img alt="Swaad Aisa Jo 4 Log Bole Waahhh!!" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl1GiR-n02JlLmjfDQCSuIC8N-UpLYbYNPPZ9mQom71_N6gzFeTKwT5-oMiaCW0W2u45d0xGWb46qdfOu6o2viaBWwwNZi59EyKteAM6KZMfxnySoOtBS9OrBTzSXO5ooqdAqYRnGhz7Z4VIeIoBdIfs05Knjq0R4uzmmkTwo4J7WC_P_cZG2W_qad9KVg6A-2kYiSsZpP7ICdaEITDS16ExU05-uw04_2qMo6xIdZPBuz4NyUSyg-z0n3sGIguxD5_fHcaglsruc">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<span class="text-xs font-label font-bold text-brand-pink mb-1 block uppercase tracking-wider">Social Media</span>
+<h3 class="font-headline text-[20px] font-bold text-white line-clamp-1">Swaad Aisa Jo 4 Log Bole Waahhh!!</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin py-xl max-w-7xl mx-auto gap-10">
+<div class="text-center md:text-left flex flex-col items-center md:items-start">
+<a class="font-headline text-headline-sm font-bold text-on-surface dark:text-inverse-on-surface block mb-xs" href="#">
+<img alt="Vraj Namkeen" class="h-14 md:h-16 w-auto mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuz5GaS0NEC8IbL7g1fl1SBmlf-XCk2uDVdDQXdP2A2XMLvl46cXBe6dq9z4KiwKPpjII0GbFDUFsUTm1WFfJvxpFWyc0MhanyYGtjVarXvNLEh0pYK2NNZ46m3sazRQE-gP54TyJN_w8yelDEs1XETh0JCTqFreBZENU0Ax7H3H23zBgEJaYnGEy71e57N_1sIzuXwNeMSdc8eBn0UB34Tx4BL3y1Dzb5FHfonWJfHDJ3qx9Fw8IkhQv100GAzmPX8aTJKT4UBQ8">
+</a>
+<p class="font-body text-xs md:text-sm text-on-surface-variant font-medium mt-2">Har Dil Ki Peheli Pasand</p>
+</div>
+<nav class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-lg">
+<a class="font-body text-sm md:text-body-md text-on-surface-variant hover:text-brand-green transition-colors opacity-80 hover:opacity-100 font-medium" href="#">Privacy Policy</a>
+<a class="font-body text-sm md:text-body-md text-on-surface-variant hover:text-brand-green transition-colors opacity-80 hover:opacity-100 font-medium" href="#">Terms of Service</a>
+<a class="font-body text-sm md:text-body-md text-on-surface-variant hover:text-brand-green transition-colors opacity-80 hover:opacity-100 font-medium" href="#">Refund Policy</a>
+<a class="font-body text-sm md:text-body-md text-on-surface-variant hover:text-brand-green transition-colors opacity-80 hover:opacity-100 font-medium" href="#">FAQ</a>
+</nav>
+<div class="text-center md:text-right font-body text-xs md:text-sm text-on-surface-variant">
+© 2024 Vraj Namkeen. All rights reserved.
+</div>
+</div>
+</footer>
+<!-- Simple JS for Hero Carousel -->
+<script>
+        function changeSlide(index) {
+            const slides = document.querySelectorAll('.hero-slide');
+            const buttons = document.querySelectorAll('.absolute.bottom-lg button');
+            
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                    setTimeout(() => slide.classList.add('hidden'), 50);
+                }
+            });
+
+            buttons.forEach((btn, i) => {
+                if (i === index) {
+                    btn.className = 'w-12 h-3 rounded-full bg-brand-yellow transition-all shadow-md';
+                } else {
+                    btn.className = 'w-8 h-3 rounded-full bg-white/50 hover:bg-white/80 backdrop-blur-sm transition-all';
+                }
+            });
+        }
+        
+        let currentSlide = 0;
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 3;
+            changeSlide(currentSlide);
+        }, 5000);
+    </script>
+</body></html>
