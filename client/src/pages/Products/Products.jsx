@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import productsData from '../../../productDescription.json'
 import './Products.css'
 
@@ -77,6 +78,7 @@ export default function Products() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [currentPage, setCurrentPage] = useState(1)
   const [modalProduct, setModalProduct] = useState(null)
+  const navigate = useNavigate()
 
   const filtered = activeCategory === 'All'
     ? productsData
@@ -223,7 +225,7 @@ export default function Products() {
                 </div>
                 
                 <div className="product-modal__actions">
-                  <button className="product-modal__cart-btn" onClick={() => { closeModal(); window.location.href = '/contact'; }}>
+                  <button className="product-modal__cart-btn" onClick={() => { closeModal(); navigate('/contact'); }}>
                     <span className="material-symbols-outlined">mail</span> Contact Us to Order
                   </button>
                 </div>
