@@ -18,24 +18,18 @@ export default function Footer() {
           <p className="footer__copy">© 2024 Vraj Namkeen. All Rights Reserved. Crafted with tradition.</p>
         </div>
 
-        {/* Company Links */}
+        {/* Address Column */}
         <div className="footer__links-col">
-          <h4 className="footer__col-title">Company</h4>
-          <ul>
-            {['Privacy Policy', 'Terms of Service', 'Manufacturing Units'].map(label => (
-              <li key={label}><a href="#" className="footer__link">{label}</a></li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Explore Links */}
-        <div className="footer__links-col">
-          <h4 className="footer__col-title">Explore</h4>
-          <ul>
-            {['Quality Standards', 'Career', 'Refund Policy', 'FAQ'].map(label => (
-              <li key={label}><a href="#" className="footer__link">{label}</a></li>
-            ))}
-          </ul>
+          <h4 className="footer__col-title">Our Address</h4>
+          <p className="footer__address-text">
+            123 Snack Avenue, Industrial Estate,<br />
+            Ahmedabad, Gujarat 380001,<br />
+            India
+          </p>
+          <p className="footer__address-text" style={{ marginTop: '12px' }}>
+            <strong>Call:</strong> +91 98765 43210<br />
+            <strong>Email:</strong> hello@vrajnamkeen.com
+          </p>
         </div>
 
         {/* Pages */}

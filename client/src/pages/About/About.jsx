@@ -27,7 +27,9 @@ export default function About() {
         <div className="about-hero__bg-overlay" />
         <div className="container about-hero__content">
           <div className="about-hero__glass">
-            <h1 className="about-hero__headline">Har Dil Ki Peheli Pasand</h1>
+            <h1 className="about-hero__headline">
+              Har Dil Ki <span className="about-hero__headline-accent">Peheli Pasand</span>
+            </h1>
             <p className="about-hero__sub">
               Crafting authentic, crispy moments of joy for every household. Taste the tradition, feel the crunch.
             </p>

@@ -70,8 +70,13 @@
   font-family: var(--font-headline);
   font-size: clamp(36px, 5vw, 56px);
   font-weight: 800;
-  color: var(--primary-fixed);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: var(--primary);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.about-hero__headline-accent {
+  color: #ffce00;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .about-hero__sub {

@@ -60,6 +60,17 @@ export default function Contact() {
                   alt="Location map"
                   className="contact-map-card__img"
                 />
+                <div className="contact-map-card__overlay">
+                  <a
+                    href="https://maps.google.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-map-card__btn"
+                  >
+                    <span className="material-symbols-outlined">directions</span>
+                    Get Directions
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -80,21 +91,6 @@ export default function Contact() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ===== FULL WIDTH MAP IMAGE ===== */}
-      <section className="contact-map-full">
-        <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhsrcQZF_R7uoMkbI2vYy5ArFkbQ9RcYaH03ai9BbK6RDIUKtg1MaIil0JukCRpE6KfgqcOVcJ6rIwFdoY3qglsS4RjAOJcekU8R82U-OKwBl3PpHOGNXg7Cz24aCnTs_dj52z84ZH-JNK4afNeA3StgAD2Zi3dwtHMkSoC4vAj8Fg9cyq0B4q2gPgHg-UwazhyvOHi1xWXWpK1E9mpgPCBh91w0U1GlRfSLJllYESL5gKG6JRTa_tJMc8DGkgG5JUJ3lH8CuTsv4"
-          alt="Factory aerial map"
-          className="contact-map-full__img"
-        />
-        <div className="contact-map-full__overlay">
-          <button className="contact-map-full__btn">
-            <span className="material-symbols-outlined">directions</span>
-            Get Directions
-          </button>
         </div>
       </section>
     </div>

@@ -1,5 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import potatoChipsImg from '../../assets/product-category/potato-chips.png'
+import namkeenImg from '../../assets/product-category/namkeen.png'
+import snacksImg from '../../assets/product-category/sncaks.png'
+import fryumsImg from '../../assets/product-category/fryums.png'
+import masalaMagicChipsImg from '../../assets/vraj-namkeen-product/masala-magic-chips.png'
+import khattaMithaImg from '../../assets/vraj-namkeen-product/khatta-mitha.png'
+import singBhujiaImg from '../../assets/vraj-namkeen-product/sing-bhujia.png'
 import './Home.css'
 
 const SLIDES = [
@@ -30,10 +37,10 @@ const SLIDES = [
 ]
 
 const CATEGORIES = [
-  { icon: 'potato', label: 'Potato Chips', color: '#fef3c7', iconColor: 'var(--brand-yellow)' },
-  { icon: 'tapas', label: 'Namkeen', color: '#dcfce7', iconColor: 'var(--brand-green)' },
-  { icon: 'fastfood', label: 'Snacks', color: '#fce7f3', iconColor: 'var(--brand-pink)' },
-  { icon: 'category', label: 'Fryums', color: '#f3e8ff', iconColor: 'var(--tertiary)' },
+  { img: potatoChipsImg, label: 'Potato Chips', color: '#fef3c7' },
+  { img: namkeenImg, label: 'Namkeen', color: '#dcfce7' },
+  { img: snacksImg, label: 'Snacks', color: '#fce7f3' },
+  { img: fryumsImg, label: 'Fryums', color: '#f3e8ff' },
 ]
 
 const SPOTLIGHT_IMGS = [
@@ -181,7 +188,7 @@ export default function Home() {
             </div>
           </div>
           <div className="categories-grid">
-            {CATEGORIES.map(({ icon, label, color, iconColor }) => (
+            {CATEGORIES.map(({ img, label, color }) => (
               <div
                 key={label}
                 className="category-poster"
@@ -191,12 +198,7 @@ export default function Home() {
                 tabIndex={0}
               >
                 <div className="category-poster__img-area">
-                  <span
-                    className="material-symbols-outlined category-poster__icon"
-                    style={{ color: iconColor }}
-                  >
-                    {icon}
-                  </span>
+                  <img src={img} alt={label} className="category-poster__img" />
                 </div>
                 <div className="category-poster__overlay" />
                 <div className="category-poster__content">
@@ -221,12 +223,12 @@ export default function Home() {
             <div className="favorites-dial__ring" />
             <div className="favorites-dial__glow" />
 
-            {/* Item 1 */}
-            <div className="fav-item fav-item--side">
+            {/* Item 1 — Sing Bhujia */}
+            <div className="fav-item fav-item--side" onClick={() => navigate('/products')}>
               <div className="fav-item__img">
-                <span className="material-symbols-outlined fav-item__icon">package</span>
+                <img src={singBhujiaImg} alt="Sing Bhujia" />
               </div>
-              <h4 className="fav-item__name">Navratan Mix</h4>
+              <h4 className="fav-item__name">Sing Bhujia</h4>
               <div className="fav-item__stars">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="material-symbols-outlined fill fav-item__star">star</span>
@@ -234,34 +236,33 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Center / Featured Item */}
-            <div className="fav-item fav-item--center">
+            {/* Center / Featured Item — Masala Magic Chips */}
+            <div className="fav-item fav-item--center" onClick={() => navigate('/products')}>
               <div className="fav-item__badge">#1 SELLER</div>
               <div className="fav-item__img fav-item__img--large">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvxRYuBUw0FOSdKgixOxL8l9gxZmBZbYNib389fTGNwnbWhEa_ZGcjymw5A6K9eayOc3PmzFyzVuB-9WNtitu6Bzb_lkgqAac9xhd7G0ItB58rKls6TcxXxcEtLbtCtNZpTpGwtEQICSmLw8Esrt6bsibOZYoixXaE8Fzd2BIJaYnhRqHJ7gv0_GligbvXWB5wIm1uu-PHmhFTg5g6ObnGdIsWmcTRUPuPJchKfyFRdqJf0nxfAjExrjhG15RAfYMlU8eEb10Wji0"
-                  alt="Ratlami Sev"
+                  src={masalaMagicChipsImg}
+                  alt="Masala Magic Chips"
                   className="fav-item__center-img"
                 />
               </div>
-              <h4 className="fav-item__name fav-item__name--lg">Ratlami Sev</h4>
-              <p className="fav-item__desc">Spicy, crunchy, iconic.</p>
-              <button className="fav-item__btn" onClick={() => navigate('/products')}>
+              <h4 className="fav-item__name fav-item__name--lg">Masala Magic Chips</h4>
+              <p className="fav-item__desc">Spicy, crunchy, absolutely magical.</p>
+              <button className="fav-item__btn">
                 View Product
               </button>
             </div>
 
-            {/* Item 3 */}
-            <div className="fav-item fav-item--side">
+            {/* Item 3 — Khatta Mitha */}
+            <div className="fav-item fav-item--side" onClick={() => navigate('/products')}>
               <div className="fav-item__img">
-                <span className="material-symbols-outlined fav-item__icon">package</span>
+                <img src={khattaMithaImg} alt="Khatta Mitha" />
               </div>
-              <h4 className="fav-item__name">Khatta Meetha</h4>
+              <h4 className="fav-item__name">Khatta Mitha</h4>
               <div className="fav-item__stars">
-                {[...Array(4)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <span key={i} className="material-symbols-outlined fill fav-item__star">star</span>
                 ))}
-                <span className="material-symbols-outlined fav-item__star">star_half</span>
               </div>
             </div>
           </div>
@@ -331,7 +332,14 @@ export default function Home() {
           </div>
           <div className="spotlight-grid">
             {SPOTLIGHT_IMGS.map(({ src, label, labelColor, title }) => (
-              <div key={title} className="spotlight-card">
+              <a
+                key={title}
+                href="https://www.instagram.com/vrajnamkeen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="spotlight-card"
+                style={{ textDecoration: 'none' }}
+              >
                 <div className="spotlight-card__img-wrap">
                   <img src={src} alt={title} className="spotlight-card__img" />
                   <div className="spotlight-card__hover-overlay" />
@@ -340,7 +348,7 @@ export default function Home() {
                     <h3 className="spotlight-card__title">{title}</h3>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

@@ -58,6 +58,7 @@
 .categories-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .category-poster { position: relative; height: 200px; border-radius: 16px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid rgba(193,198,213,0.2); }
 .category-poster__img-area { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transition: transform 0.7s ease; }
+.category-poster__img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .category-poster:hover .category-poster__img-area { transform: scale(1.1); }
 .category-poster__icon { font-size: 90px; font-variation-settings: 'FILL' 1; opacity: 0.45; transition: opacity 0.4s; }
 .category-poster:hover .category-poster__icon { opacity: 0.25; }
@@ -97,9 +98,10 @@
 .fav-item--center { padding: 20px; width: 300px; border: 2px solid rgba(0,150,57,0.18); border-radius: 24px; box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
 .fav-item__badge { position: absolute; top: -16px; right: -16px; background: var(--brand-pink); color: #fff; padding: 4px 14px; border-radius: 9999px; font-family: var(--font-label); font-size: 11px; font-weight: 700; box-shadow: 0 4px 12px rgba(230,0,126,0.35); }
 .fav-item__img { background: var(--surface-container); border-radius: 12px; height: 160px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 12px; }
+.fav-item__img img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 .fav-item__img--large { height: 200px; border-radius: 16px; }
 .fav-item__icon { font-size: 56px; color: rgba(0,150,57,0.18); font-variation-settings: 'FILL' 1; }
-.fav-item__center-img { width: 100%; height: 100%; object-fit: cover; }
+.fav-item__center-img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
 .fav-item__name { font-family: var(--font-headline); font-size: 18px; font-weight: 700; color: var(--on-surface); margin-bottom: 4px; }
 .fav-item__name--lg { font-size: 22px; margin-bottom: 6px; }
 .fav-item__desc { font-family: var(--font-body); font-size: 13px; color: var(--on-surface-variant); margin-bottom: 16px; }

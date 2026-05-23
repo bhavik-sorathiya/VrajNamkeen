@@ -32,8 +32,8 @@
   transition: all 0.2s; text-decoration: none;
 }
 .dist-hero__btn:hover { transform: translateY(-2px); }
-.dist-hero__btn--primary { background: var(--secondary); color: var(--on-secondary-container); box-shadow: 0 8px 24px rgba(117,91,0,0.3); }
-.dist-hero__btn--primary:hover { background: var(--secondary-container); }
+.dist-hero__btn--primary { background: var(--brand-green); color: #ffffff; box-shadow: 0 8px 24px rgba(0,150,57,0.3); }
+.dist-hero__btn--primary:hover { background: var(--brand-yellow); color: var(--on-background); box-shadow: 0 8px 24px rgba(255,206,0,0.4); }
 .dist-hero__btn--ghost { background: transparent; border: 2px solid rgba(247,255,242,0.3); color: var(--on-primary-container); }
 .dist-hero__btn--ghost:hover { background: rgba(247,255,242,0.1); }
 .dist-hero__btn .material-symbols-outlined { font-size: 20px; }

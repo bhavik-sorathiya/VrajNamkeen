@@ -49,8 +49,30 @@
 .contact-map-card__header { padding: 32px 32px 0; }
 .contact-map-card__title { font-family: var(--font-headline); font-size: 28px; font-weight: 600; color: var(--on-surface); margin-bottom: 8px; }
 .contact-map-card__sub { font-family: var(--font-body); font-size: 14px; color: var(--on-surface-variant); margin-bottom: 24px; }
-.contact-map-card__img-wrap { width: 100%; height: 320px; }
+.contact-map-card__img-wrap { width: 100%; height: 320px; position: relative; }
 .contact-map-card__img { width: 100%; height: 100%; object-fit: cover; }
+.contact-map-card__overlay {
+  position: absolute; inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.contact-map-card__img-wrap:hover .contact-map-card__overlay {
+  opacity: 1;
+}
+.contact-map-card__btn {
+  background: var(--surface-container-lowest); color: var(--primary);
+  font-family: var(--font-label); font-size: 14px; font-weight: 600;
+  padding: 12px 24px; border-radius: 9999px;
+  border: none; cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: flex; align-items: center; gap: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.contact-map-card__btn:hover { background: var(--primary); color: #fff; transform: scale(1.05); }
+.contact-map-card__btn .material-symbols-outlined { font-size: 16px; }
 
 /* Contact Info */
 .contact-info-list {
@@ -78,37 +100,6 @@
 .contact-info__icon-wrap .material-symbols-outlined { font-size: 24px; color: inherit; }
 .contact-info__title { font-family: var(--font-headline); font-size: 20px; font-weight: 600; color: var(--on-surface); margin-bottom: 8px; }
 .contact-info__line { font-family: var(--font-body); font-size: 14px; color: var(--on-surface-variant); line-height: 1.7; }
-
-/* ===== FULL WIDTH MAP ===== */
-.contact-map-full {
-  width: 100%; height: 380px;
-  position: relative; overflow: hidden;
-  cursor: pointer;
-  margin-top: 48px;
-  background: var(--surface-container);
-}
-.contact-map-full__img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.7s;
-}
-.contact-map-full:hover .contact-map-full__img { transform: scale(1.05); }
-.contact-map-full__overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(50,48,41,0.8) 0%, transparent 50%);
-  display: flex; align-items: flex-end; justify-content: center;
-  padding-bottom: 48px;
-}
-.contact-map-full__btn {
-  background: var(--surface-container-lowest); color: var(--primary);
-  font-family: var(--font-label); font-size: 14px; font-weight: 600;
-  padding: 12px 24px; border-radius: 9999px;
-  border: none; cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  display: flex; align-items: center; gap: 8px;
-  transition: background 0.2s, color 0.2s;
-}
-.contact-map-full__btn:hover { background: var(--primary); color: var(--on-primary); }
-.contact-map-full__btn .material-symbols-outlined { font-size: 16px; }
 
 /* ===== RESPONSIVE ===== */
 @media (min-width: 1024px) {

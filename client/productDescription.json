@@ -1,0 +1,392 @@
+[
+    {
+        "id": "1",
+        "name": "Tomato Masti Chips",
+        "category": "potato chips",
+        "description": "Crispy potato chips coated with a tangy tomato seasoning for a bold and tasty snack experience.",
+        "tasteTags": [
+            "Tangy Tomato",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Ketchup Katori",
+        "category": "snacks",
+        "description": "Crunchy katori-shaped snacks blended with rich ketchup flavour and light spices.",
+        "tasteTags": [
+            "Ketchup Flavour",
+            "Crispy"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Tomato Katori",
+        "category": "snacks",
+        "description": "Crispy katori snacks seasoned with delicious tomato masala for a savoury bite.",
+        "tasteTags": [
+            "Tomato Masala",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Super Dhamaka",
+        "category": "namkeen",
+        "description": "A spicy namkeen mix packed with crunchy ingredients and bold Indian flavours.",
+        "tasteTags": [
+            "Spicy",
+            "Crunchy Mix"
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Simply Salted Chips",
+        "category": "potato chips",
+        "description": "Classic thin potato chips lightly seasoned with salt for a simple crunchy taste.",
+        "tasteTags": [
+            "Light Salted",
+            "Crispy"
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Salted Sevmamra",
+        "category": "namkeen",
+        "description": "A light and crispy mix of sev and mamra with balanced salted seasoning.",
+        "tasteTags": [
+            "Light Salted",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "7",
+        "name": "Thikhha Mix",
+        "category": "namkeen",
+        "description": "Spicy namkeen mixture loaded with crunchy ingredients and traditional masala flavours.",
+        "tasteTags": [
+            "Spicy",
+            "Masala Mix"
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Sing Bhujia",
+        "category": "namkeen",
+        "description": "Crunchy peanut-based bhujia snack blended with savoury Indian spices.",
+        "tasteTags": [
+            "Peanut Flavour",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "9",
+        "name": "Ratlami Sev",
+        "category": "namkeen",
+        "description": "Traditional Ratlami sev prepared with spicy gram flour seasoning and crisp texture.",
+        "tasteTags": [
+            "Spicy",
+            "Traditional"
+        ]
+    },
+    {
+        "id": "10",
+        "name": "Sakkarpara",
+        "category": "snacks",
+        "description": "Sweet and crunchy diamond-shaped snack made with traditional Indian flavours.",
+        "tasteTags": [
+            "Sweet",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "11",
+        "name": "Pet Bharlo",
+        "category": "namkeen",
+        "description": "A filling crunchy namkeen mixture loaded with spicy and savoury flavours.",
+        "tasteTags": [
+            "Spicy",
+            "Crunchy Mix"
+        ]
+    },
+    {
+        "id": "12",
+        "name": "Panner Tikka",
+        "category": "snacks",
+        "description": "Crunchy snack inspired by rich paneer tikka flavour with smoky masala seasoning.",
+        "tasteTags": [
+            "Paneer Tikka",
+            "Smoky Masala"
+        ]
+    },
+    {
+        "id": "13",
+        "name": "Plain Salted Chips",
+        "category": "potato chips",
+        "description": "Thin crispy potato chips with classic salted taste for everyday snacking.",
+        "tasteTags": [
+            "Classic Salted",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "14",
+        "name": "Peturam Ke Puffs",
+        "category": "fryums",
+        "description": "Light and airy puff snacks with a savoury masala flavour and crunchy texture.",
+        "tasteTags": [
+            "Light Crunch",
+            "Masala"
+        ]
+    },
+    {
+        "id": "15",
+        "name": "Pasta Ka Nasta",
+        "category": "snacks",
+        "description": "Fun pasta-shaped crunchy snack coated with spicy and tangy seasoning.",
+        "tasteTags": [
+            "Tangy",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "16",
+        "name": "Papad",
+        "category": "snacks",
+        "description": "Traditional crispy papad snack with a light spicy and savoury flavour.",
+        "tasteTags": [
+            "Crispy",
+            "Traditional"
+        ]
+    },
+    {
+        "id": "17",
+        "name": "Masala Papad",
+        "category": "snacks",
+        "description": "Crunchy papad seasoned with bold masala spices for extra flavour.",
+        "tasteTags": [
+            "Masala",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "18",
+        "name": "Masala Magic Chips",
+        "category": "potato chips",
+        "description": "Crispy potato chips loaded with spicy masala seasoning and rich flavour.",
+        "tasteTags": [
+            "Masala",
+            "Spicy"
+        ]
+    },
+    {
+        "id": "19",
+        "name": "Moong Dal",
+        "category": "namkeen",
+        "description": "Crunchy fried moong dal snack lightly spiced for a tasty munching experience.",
+        "tasteTags": [
+            "Crunchy",
+            "Light Spicy"
+        ]
+    },
+    {
+        "id": "20",
+        "name": "Khari Sing",
+        "category": "namkeen",
+        "description": "Salted crunchy peanuts roasted with traditional Indian seasoning.",
+        "tasteTags": [
+            "Salted",
+            "Peanut Crunch"
+        ]
+    },
+    {
+        "id": "21",
+        "name": "Khatta Mitha",
+        "category": "namkeen",
+        "description": "A delicious sweet and tangy namkeen mix with crispy ingredients.",
+        "tasteTags": [
+            "Sweet & Tangy",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "22",
+        "name": "Karare Crunch Tomato Twist",
+        "category": "potato chips",
+        "description": "Extra crunchy chips with rich tomato seasoning and a tangy flavour twist.",
+        "tasteTags": [
+            "Tomato Twist",
+            "Extra Crunchy"
+        ]
+    },
+    {
+        "id": "23",
+        "name": "Karare Crunch Masala Masti",
+        "category": "potato chips",
+        "description": "Crunchy potato chips seasoned with spicy masala flavours for a tasty bite.",
+        "tasteTags": [
+            "Masala",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "24",
+        "name": "Jeera Papad",
+        "category": "snacks",
+        "description": "Traditional crispy papad flavoured with aromatic jeera and mild spices.",
+        "tasteTags": [
+            "Jeera",
+            "Traditional"
+        ]
+    },
+    {
+        "id": "25",
+        "name": "Italian Pasta",
+        "category": "snacks",
+        "description": "Crunchy pasta-inspired snack with delicious Italian seasoning and herbs.",
+        "tasteTags": [
+            "Italian Herbs",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "26",
+        "name": "Farali Tikha Chevda",
+        "category": "namkeen",
+        "description": "Spicy farali chevda mix made with crunchy ingredients and festive flavours.",
+        "tasteTags": [
+            "Spicy",
+            "Farali"
+        ]
+    },
+    {
+        "id": "27",
+        "name": "Farali Meetha Chevda",
+        "category": "namkeen",
+        "description": "Sweet and crunchy farali chevda with a balanced festive taste.",
+        "tasteTags": [
+            "Sweet",
+            "Farali"
+        ]
+    },
+    {
+        "id": "28",
+        "name": "Corn Sev Samosa",
+        "category": "snacks",
+        "description": "Crunchy corn-based snack blended with sev and samosa-inspired spices.",
+        "tasteTags": [
+            "Corn Flavour",
+            "Masala"
+        ]
+    },
+    {
+        "id": "29",
+        "name": "Corn Finger Chips",
+        "category": "fryums",
+        "description": "Finger-shaped crispy corn fryums with savoury masala seasoning.",
+        "tasteTags": [
+            "Corn Taste",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "30",
+        "name": "Chili Noodles",
+        "category": "snacks",
+        "description": "Crunchy noodle-style snack tossed with spicy chili flavour.",
+        "tasteTags": [
+            "Chili Spice",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "31",
+        "name": "Chat Katori",
+        "category": "snacks",
+        "description": "Crispy katori-shaped snack with chatpata Indian masala flavours.",
+        "tasteTags": [
+            "Chatpata",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "32",
+        "name": "Chana Dal",
+        "category": "namkeen",
+        "description": "Crunchy fried chana dal seasoned with light spices and salt.",
+        "tasteTags": [
+            "Crunchy",
+            "Light Spicy"
+        ]
+    },
+    {
+        "id": "33",
+        "name": "Bhel",
+        "category": "namkeen",
+        "description": "A crispy bhel mixture with tangy, spicy and savoury Indian flavours.",
+        "tasteTags": [
+            "Tangy",
+            "Crunchy Mix"
+        ]
+    },
+    {
+        "id": "34",
+        "name": "Bhavnagri Gathiya",
+        "category": "namkeen",
+        "description": "Traditional thick gathiya snack with soft crunch and authentic Gujarati taste.",
+        "tasteTags": [
+            "Traditional",
+            "Gujarati Taste"
+        ]
+    },
+    {
+        "id": "35",
+        "name": "Bansri Ka Jadu",
+        "category": "fryums",
+        "description": "Fun-shaped crunchy fryums snack with savoury masala flavour.",
+        "tasteTags": [
+            "Fun Snack",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "36",
+        "name": "Bachho Ka Bank",
+        "category": "fryums",
+        "description": "Colourful and crispy fryums snack specially made for fun munching.",
+        "tasteTags": [
+            "Fun Crunch",
+            "Light Masala"
+        ]
+    },
+    {
+        "id": "37",
+        "name": "Aloo Sev",
+        "category": "namkeen",
+        "description": "Thin crispy sev blended with potato flavour and mild spices.",
+        "tasteTags": [
+            "Potato Taste",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "38",
+        "name": "ABCD Fryums",
+        "category": "fryums",
+        "description": "Lightweight and crisp alphabet-shaped fryums with savoury masala flavour.",
+        "tasteTags": [
+            "Fun Shapes",
+            "Crunchy"
+        ]
+    },
+    {
+        "id": "39",
+        "name": "ABCD",
+        "category": "fryums",
+        "description": "Crunchy alphabet-shaped fryums with light spices and crispy texture.",
+        "tasteTags": [
+            "Kid's Favourite",
+            "Crunchy"
+        ]
+    }
+]
