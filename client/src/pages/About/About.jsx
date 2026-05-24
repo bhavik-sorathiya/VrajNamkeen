@@ -1,9 +1,11 @@
+import poster2 from '../../assets/banners/poster-2.png'
+import poster3 from '../../assets/banners/poster-3.png'
 import './About.css'
 
 const JOURNEY_ITEMS = [
-  { title: 'The Beginning', desc: 'Founded with a simple mission: to bring the authentic taste of homemade namkeen to everyone. We started small, focusing purely on quality and that nostalgic flavor.', bar: 1 },
-  { title: 'Growing the Family', desc: 'As word spread, so did our reach. We expanded our product line to include farali, sev, and unique localized flavors, becoming a staple in regional households.', bar: 2 },
-  { title: 'Modern Innovation', desc: 'Today, we blend traditional recipes with state-of-the-art manufacturing to ensure every packet of Vraj Namkeen delivers consistent crunch, hygiene, and unparalleled taste.', bar: 3 },
+  { title: 'Authentic Charotar Recipes', desc: 'We at Vraj Namkeen always use the best quality ingredients and freshly ground spices to bring you "The Asli Taste of Charotar Namkeen", made using the most authentic traditional recipes.', bar: 1 },
+  { title: 'Consistent Quality & Best Taste', desc: 'Extremely popular across all age groups due to our consistent quality and tongue-tingling taste. Every batch is seasoned with freshly ground spices and manufactured under strict hygiene.', bar: 2 },
+  { title: 'Expanding Vision', desc: 'Our vision is to make Vraj Namkeen popular all over India and abroad. We are continuously adding new products in our namkeen, potato chips, and snack foods range.', bar: 3 },
 ]
 
 const CORE_VALUES = [
@@ -20,7 +22,7 @@ export default function About() {
       {/* ===== HERO ===== */}
       <section className="about-hero" aria-label="About page hero">
         <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWpmvxpXLR9XERXx2YgUGkhr47BdhoVXXx6OeSpUs6QBgAGAuRZdbEmNjili2HnqYBCQDfMP45zpZfIfji9POrk05ymyY9oH5bsBoI0NTvcvfwqX3_TfUaYPRr_tyQmJoUJ01FzBf7ikcAORd2hjqONBwaQeWdtQFR6XKAHpe3xTRfXDAdM-vRKzucBJArA98-7T2rPZooG3D0_khLuSE_3d5Vq_EcVu-zWtP5x6AqZLxuQ-9NzHA5zRUOTwZf83bc-YazrYS-678"
+          src={poster2}
           alt="Indian Snacks Background"
           className="about-hero__bg-img"
         />
@@ -32,6 +34,24 @@ export default function About() {
             </h1>
             <p className="about-hero__sub">
               Crafting authentic, crispy moments of joy for every household. Taste the tradition, feel the crunch.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== WELCOME SECTION ===== */}
+      <section className="about-welcome section" aria-labelledby="welcome-heading">
+        <div className="container">
+          <div className="about-welcome__glass">
+            <h2 id="welcome-heading" className="about-welcome__title">
+              Welcome to the world of <span className="about-welcome__title-accent">Tasty Treat</span>
+            </h2>
+            <div className="section-bar" style={{ margin: '1rem auto' }} />
+            <p className="about-welcome__lead">
+              The World of Vraj Namkeen, Potato Chips and Snack Foods
+            </p>
+            <p className="about-welcome__text">
+              We are sure that Best Quality, Tongue Tingling Taste and Range of products will lead us towards No. 1 Position in the snacks food market in very near future.
             </p>
           </div>
         </div>
@@ -63,7 +83,7 @@ export default function About() {
             {/* Right: Image */}
             <div className="journey-image-wrap">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB20n2StontQOzehaMAwFGjyJ0yTTBWwOYUHvGzDUj6fSFWgwYHrDbeUWEudWdRGDr3gJA5DqrogPaCvP7zDnnQNmNrxzxCi_1ebxSNzsN7Khn1JgY7T5KxG9CEnoOFq2jj7zfRXOiAwXtPhr3Y5HUhiEuURpzHd48QAeAJ-jnet-Xdugm_GfPXIRRPi_neMXOjlilVCP2K5u7dIARmXgg-vp3vYpQmSEOmC1-Co4MJ2EH3tjcUXDCLWb1UXTE9BoUwYnTXM2sZQ4"
+                src={poster3}
                 alt="Assorted Vraj Namkeen Products"
                 className="journey-image"
               />

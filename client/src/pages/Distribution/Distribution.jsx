@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import poster1 from '../../assets/banners/poster-1.png'
+import poster4 from '../../assets/banners/poster-4.png'
 import './Distribution.css'
 
 const BENEFITS = [
@@ -48,7 +50,7 @@ export default function Distribution() {
           </div>
           <div className="dist-hero__visual">
             <div className="dist-hero__img-wrap">
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqK-thpC-vLMpF9KNmDmFPb6oA9R92pCW-iF55QIyp5WUjT_9F8QCGVHF2c6Q8ky9q-Je2tCJt7pi-Nl0vR5_8fksNh19ojX6712L1bgpmj5Z8tWfHJ0QpEdEsEGJdZATEdd7MT8wIm9-_SkzOBqa6t-ODEcHW8u3qiqALgy0EenFShW0IwBbuJS_A2Wvo0SQrftX8YEqgIKBYTbbyM0-KvDHZYrJ1760rgbM9IbaBM5JFpuXOt9FA40Brk5uw1ISV5_tMq1rwyfA" alt="Vraj Namkeen Products" className="dist-hero__img" />
+              <img src={poster4} alt="Vraj Namkeen Products" className="dist-hero__img" />
               <div className="dist-hero__img-overlay">
                 <div className="dist-hero__img-badge">
                   <span className="dist-hero__img-badge-text">Premium Quality</span>
@@ -169,7 +171,7 @@ export default function Distribution() {
             {/* Sidebar */}
             <div className="dist-form-sidebar">
               <div className="dist-sidebar-img-wrap">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiesOgdITpflJv3ZHMMaRErEhogmVyK28lrjlBL--a82JeTEpXPaIVIzlgvseLORe_VH43n3lFRQQtv1hERYgFhLjo790BBJs7yxruP9nDbtGHhQqLmFr1gm1ofcwwDCXedAez95YQnonyRiTC59Ohga3PN9_fkPu9XB0hqqPS6h0DiM1ArXWUMcvtdFavt3xIpMla9I3SdTlDhHM_eXQDOWSj5AwbFAwQ_ZJtBh3KJB88wGBY68CGjpbuAEhaN7ZmDOYZKLGQ6K8" alt="Authentic Snacks" className="dist-sidebar-img" />
+                <img src={poster1} alt="Authentic Snacks" className="dist-sidebar-img" />
                 <div className="dist-sidebar-img__overlay" />
                 <div className="dist-sidebar-img__text">
                   <h3>Authentic Taste</h3>

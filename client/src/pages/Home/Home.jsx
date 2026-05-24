@@ -7,12 +7,16 @@ import fryumsImg from '../../assets/product-category/fryums.png'
 import masalaMagicChipsImg from '../../assets/vraj-namkeen-product/masala-magic-chips.png'
 import khattaMithaImg from '../../assets/vraj-namkeen-product/khatta-mitha.png'
 import singBhujiaImg from '../../assets/vraj-namkeen-product/sing-bhujia.png'
+import poster1 from '../../assets/banners/poster-1.png'
+import poster2 from '../../assets/banners/poster-2.png'
+import poster3 from '../../assets/banners/poster-3.png'
+import poster4 from '../../assets/banners/poster-4.png'
 import './Home.css'
 
 const SLIDES = [
   {
     id: 1,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBvxRYuBUw0FOSdKgixOxL8l9gxZmBZbYNib389fTGNwnbWhEa_ZGcjymw5A6K9eayOc3PmzFyzVuB-9WNtitu6Bzb_lkgqAac9xhd7G0ItB58rKls6TcxXxcEtLbtCtNZpTpGwtEQICSmLw8Esrt6bsibOZYoixXaE8Fzd2BIJaYnhRqHJ7gv0_GligbvXWB5wIm1uu-PHmhFTg5g6ObnGdIsWmcTRUPuPJchKfyFRdqJf0nxfAjExrjhG15RAfYMlU8eEb10Wji0',
+    img: poster1,
     alt: 'The Best Travel Companions',
     tag: 'Premium Quality',
     headline: ['Har Dil Ki', 'Peheli Pasand'],
@@ -20,7 +24,7 @@ const SLIDES = [
   },
   {
     id: 2,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCmyWcQKK8bq75-FGhDPL6-jpeoJupvHEBh8FbEESg45vWy8k59ty-BxIZkmvf_M_0bedYL0amNikPwh1fUdq32GHsmr2o17MmckBaoFMVTlEI-J19-spsCDJBv2EiV7PGGI0-e1Zw7Ai3sDlvp0Je4sYyxSFcjuA33nwmpeEwC2-NDmDc2Ot4PCXcN8TXtZeKUhfgmDEZI_qEHGL6H-5zoa_Lx_4H5AUw6wa0ls5f_vAZz30Lj2w2QxzpBMA7EZ8DlVH-vceggcMM',
+    img: poster2,
     alt: 'All Time Travelling Partner',
     tag: 'Crispy & Fresh',
     headline: ['All Time', 'Travelling Partner'],
@@ -28,7 +32,7 @@ const SLIDES = [
   },
   {
     id: 3,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkXBkCtJmAOcYbDFi_7EXVqMuQFtzjfjar38X_1fvbgyqK2DjXdgyUyf5tCaUNRskj3jQvwXoOlNTCVi76shQ1VUtcEy_jrsS2ttafTy_btojJJqTOKKHvJnfqNWCwz6-TKqZfOUb1dYxKXxHwzrapvnORhVNsuVLOR-4hz9wtrnZiD5Fke9KMM4Gj0AD5zVQ_d_yfAuZflLY9-quEdtBQ3MpjGRe3AyN01cPIkkOafljVu8JpF5kyA0_qRcDKZNwZz0krd1O3RRo',
+    img: poster3,
     alt: 'Sit Back & Relax',
     tag: 'Perfect Snack Time',
     headline: ['Sit Back', '& Relax'],
@@ -45,13 +49,13 @@ const CATEGORIES = [
 
 const SPOTLIGHT_IMGS = [
   {
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCxR554H_bWcTNQqVcQV6FP0F7m7AUSSK7fx-w-oP_5urwUAHl8iXLYoHc_pPLkYmrMopQxWFJjsVbcoMs83U9jkePiiFR3aXn8J8GY-Iu6RF5aH-5Xa3pNg0TPk-duP2vbIStVE41KAF47pf9OVCB-GSXxK9ZVGAimdn5NocjfaFDnDZfFASjuX9qIxVGgqNH6uO9wEI4Eq5a_FcV5u1gg5goaEKUCJFGvgTY2B6LCGmboW9Stx_mL2RQKw7OwDGc03Pcb0nQel7M',
+    src: poster4,
     label: 'Print Campaign',
     labelColor: 'var(--brand-yellow)',
     title: 'A Table Filled With Snacks',
   },
   {
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCl1GiR-n02JlLmjfDQCSuIC8N-UpLYbYNPPZ9mQom71_N6gzFeTKwT5-oMiaCW0W2u45d0xGWb46qdfOu6o2viaBWwwNZi59EyKteAM6KZMfxnySoOtBS9OrBTzSXO5ooqdAqYRnGhz7Z4VIeIoBdIfs05Knjq0R4uzmmkTwo4J7WC_P_cZG2W_qad9KVg6A-2kYiSsZpP7ICdaEITDS16ExU05-uw04_2qMo6xIdZPBuz4NyUSyg-z0n3sGIguxD5_fHcaglsruc',
+    src: poster1,
     label: 'Social Media',
     labelColor: 'var(--brand-pink)',
     title: 'Swaad Aisa Jo 4 Log Bole Waahhh!!',
@@ -331,25 +335,59 @@ export default function Home() {
             </div>
           </div>
           <div className="spotlight-grid">
-            {SPOTLIGHT_IMGS.map(({ src, label, labelColor, title }) => (
-              <a
-                key={title}
-                href="https://www.instagram.com/vrajnamkeen/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="spotlight-card"
-                style={{ textDecoration: 'none' }}
-              >
-                <div className="spotlight-card__img-wrap">
-                  <img src={src} alt={title} className="spotlight-card__img" />
-                  <div className="spotlight-card__hover-overlay" />
-                  <div className="spotlight-card__hover-text">
-                    <span className="spotlight-card__label" style={{ color: labelColor }}>{label}</span>
-                    <h3 className="spotlight-card__title">{title}</h3>
-                  </div>
+            {/* Spotlight Card 1 */}
+            <div
+              className="spotlight-card"
+              onClick={() => window.open('https://www.instagram.com/reel/C9ZAn3_sS9Z/', '_blank')}
+            >
+              <div className="spotlight-card__img-wrap">
+                <img src={poster4} alt="The Asli Taste of Charotar Campaign" className="spotlight-card__img" />
+                <div className="spotlight-card__hover-overlay" />
+                <div className="spotlight-card__play-btn">
+                  <span className="material-symbols-outlined fill">play_arrow</span>
                 </div>
-              </a>
-            ))}
+                <div className="spotlight-card__hover-text">
+                  <span className="spotlight-card__label" style={{ color: 'var(--brand-yellow)' }}>Instagram Reel</span>
+                  <h3 className="spotlight-card__title">The Asli Taste of Charotar</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Spotlight Card 2 */}
+            <div
+              className="spotlight-card"
+              onClick={() => window.open('https://www.instagram.com/reel/Cw_39ClobrE/', '_blank')}
+            >
+              <div className="spotlight-card__img-wrap">
+                <img src={poster2} alt="All-Time Travelling Partner Campaign" className="spotlight-card__img" />
+                <div className="spotlight-card__hover-overlay" />
+                <div className="spotlight-card__play-btn">
+                  <span className="material-symbols-outlined fill">play_arrow</span>
+                </div>
+                <div className="spotlight-card__hover-text">
+                  <span className="spotlight-card__label" style={{ color: 'var(--brand-yellow)' }}>Commercial Campaign</span>
+                  <h3 className="spotlight-card__title">All-Time Travelling Partner</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Spotlight Card 3 */}
+            <div
+              className="spotlight-card"
+              onClick={() => window.open('https://www.instagram.com/reel/DYRBN1zBOEL/', '_blank')}
+            >
+              <div className="spotlight-card__img-wrap">
+                <img src={poster3} alt="Har Dil Ki Peheli Pasand Campaign" className="spotlight-card__img" />
+                <div className="spotlight-card__hover-overlay" />
+                <div className="spotlight-card__play-btn">
+                  <span className="material-symbols-outlined fill">play_arrow</span>
+                </div>
+                <div className="spotlight-card__hover-text">
+                  <span className="spotlight-card__label" style={{ color: 'var(--brand-yellow)' }}>Latest Buzz</span>
+                  <h3 className="spotlight-card__title">Har Dil Ki Peheli Pasand</h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

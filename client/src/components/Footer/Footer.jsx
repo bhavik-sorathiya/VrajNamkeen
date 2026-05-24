@@ -22,13 +22,13 @@ export default function Footer() {
         <div className="footer__links-col">
           <h4 className="footer__col-title">Our Address</h4>
           <p className="footer__address-text">
-            123 Snack Avenue, Industrial Estate,<br />
-            Ahmedabad, Gujarat 380001,<br />
-            India
+            <strong>Vraj Namkeen</strong><br />
+            Suraj Farm, At. Chikhodra-388 320,<br />
+            Ta. & Dist. Anand, Gujarat (INDIA)
           </p>
           <p className="footer__address-text" style={{ marginTop: '12px' }}>
-            <strong>Call:</strong> +91 98765 43210<br />
-            <strong>Email:</strong> hello@vrajnamkeen.com
+            <strong>Call:</strong> +91 9879025922, +91 9428076690<br />
+            <strong>Email:</strong> hariomnamkeen22@gmail.com
           </p>
         </div>
 

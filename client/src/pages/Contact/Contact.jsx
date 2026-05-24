@@ -3,18 +3,18 @@ import './Contact.css'
 
 const CONTACT_INFO = [
   {
-    icon: 'location_on', title: 'Our Office',
-    lines: ['123 Snack Avenue, Industrial Estate', 'Ahmedabad, Gujarat 380001', 'India'],
+    icon: 'location_on', title: 'Our Address',
+    lines: ['Vraj Namkeen', 'Suraj Farm, At. Chikhodra-388 320', 'Ta. & Dist. Anand, Gujarat (INDIA)'],
     bgClass: 'contact-info__icon--yellow',
   },
   {
     icon: 'call', title: 'Call Us',
-    lines: ['+91 98765 43210', 'Mon-Sat, 9:00 AM - 6:00 PM'],
+    lines: ['+91 98790 25922', '+91 94280 76690', 'Mon-Sat, 9:00 AM - 6:00 PM'],
     bgClass: 'contact-info__icon--green',
   },
   {
     icon: 'mail', title: 'Email Us',
-    lines: ['hello@vrajnamkeen.com', 'support@vrajnamkeen.com'],
+    lines: ['hariomnamkeen22@gmail.com'],
     bgClass: 'contact-info__icon--pink',
   },
 ]
@@ -52,7 +52,7 @@ export default function Contact() {
             <div className="contact-map-card">
               <div className="contact-map-card__header">
                 <h2 className="contact-map-card__title">Our Location</h2>
-                <p className="contact-map-card__sub">Visit our corporate headquarters in Ahmedabad.</p>
+                <p className="contact-map-card__sub">Visit our manufacturing unit & office in Anand, Gujarat.</p>
               </div>
               <div className="contact-map-card__img-wrap">
                 <img
